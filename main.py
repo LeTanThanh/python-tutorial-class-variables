@@ -40,3 +40,11 @@ if __name__ == "__main__":
 
   setattr(HtmlDocument, "media_type", "text/html")
   print(HtmlDocument.media_type)
+
+  # Delete class variables
+
+  print(HtmlDocument.version)
+  delattr(HtmlDocument, "version")
+
+  # HtmlDocument.version
+  # AttributeError
