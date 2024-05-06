@@ -51,13 +51,19 @@ if __name__ == "__main__":
 
   # Class variable storage
 
-  from pprint import pprint
+  # from pprint import pprint
 
-  HtmlDocument.media_type = "text/html"
-  pprint(HtmlDocument.__dict__)
+  # HtmlDocument.media_type = "text/html"
+  # pprint(HtmlDocument.__dict__)
 
   # HtmlDocument.__dict__["released"] = 2008
   # TypeError
 
-  doc = HtmlDocument.__dict__["__doc__"]  # BAD CODE
-  print(doc)
+  # doc = HtmlDocument.__dict__["__doc__"]  # BAD CODE
+  # print(doc)
+
+  # Callable class attributes
+
+  from pprint import pprint
+
+  pprint(HtmlDocument.__dict__["render"])
