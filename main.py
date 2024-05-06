@@ -18,14 +18,25 @@ if __name__ == "__main__":
   # HtmlDocument.media_type
   # AttributeError
 
-  extension = getattr(HtmlDocument, "extension")
-  print(extension)
+  # extension = getattr(HtmlDocument, "extension")
+  # print(extension)
 
-  version = getattr(HtmlDocument, "version")
-  print(version)
+  # version = getattr(HtmlDocument, "version")
+  # print(version)
 
   # media_type = getattr(HtmlDocument, "media_type")
   # AttributeError
 
-  media_type = getattr(HtmlDocument, "media_type", "text/html")
-  print(media_type)
+  # media_type = getattr(HtmlDocument, "media_type", "text/html")
+  # print(media_type)
+
+  # Set values for class variables
+
+  HtmlDocument.version = 10
+  print(HtmlDocument.version)
+
+  HtmlDocument.media_type = "text/html"
+  print(HtmlDocument.media_type)
+
+  setattr(HtmlDocument, "media_type", "text/html")
+  print(HtmlDocument.media_type)
