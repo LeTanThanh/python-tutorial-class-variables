@@ -32,19 +32,32 @@ if __name__ == "__main__":
 
   # Set values for class variables
 
-  HtmlDocument.version = 10
-  print(HtmlDocument.version)
+  # HtmlDocument.version = 10
+  # print(HtmlDocument.version)
 
-  HtmlDocument.media_type = "text/html"
-  print(HtmlDocument.media_type)
+  # HtmlDocument.media_type = "text/html"
+  # print(HtmlDocument.media_type)
 
-  setattr(HtmlDocument, "media_type", "text/html")
-  print(HtmlDocument.media_type)
+  # setattr(HtmlDocument, "media_type", "text/html")
+  # print(HtmlDocument.media_type)
 
   # Delete class variables
 
-  print(HtmlDocument.version)
-  delattr(HtmlDocument, "version")
+  # print(HtmlDocument.version)
+  # delattr(HtmlDocument, "version")
 
   # HtmlDocument.version
   # AttributeError
+
+  # Class variable storage
+
+  from pprint import pprint
+
+  HtmlDocument.media_type = "text/html"
+  pprint(HtmlDocument.__dict__)
+
+  # HtmlDocument.__dict__["released"] = 2008
+  # TypeError
+
+  doc = HtmlDocument.__dict__["__doc__"]  # BAD CODE
+  print(doc)
